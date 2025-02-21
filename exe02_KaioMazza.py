@@ -22,7 +22,7 @@ confirmacao = "s"
 while confirmacao == "s":
     try:
         indexProcurado = int(input("\nDigite um número entre 0 e 9: "))
-        produtoIndex = produtos[indexProcurado]
+        produtoIndex = produtos.__getitem__(indexProcurado)
         print("No index {} está o produto {}!".format(indexProcurado, produtoIndex))
         break
     except:
