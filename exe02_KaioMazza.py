@@ -21,8 +21,8 @@ confirmacao = "s"
 
 while confirmacao == "s":
     try:
-        indexProcurado = int(input("\nDigite um número entre 0 e 9: ")).lower()
-        produtoIndex = produtos.index(indexProcurado)
+        indexProcurado = int(input("\nDigite um número entre 0 e 9: "))
+        produtoIndex = produtos[indexProcurado]
         print("No index {} está o produto {}!".format(indexProcurado, produtoIndex))
         break
     except:
