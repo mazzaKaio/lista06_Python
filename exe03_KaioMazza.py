@@ -20,3 +20,4 @@ while confirmacao[0] == "s":
     confirmacao = input("\nAgora, você deseja adicionar mais algúem a sua lista? [sim/s, nao/n]: ").lower()
 
 print("\nVocê convidou {} pessoas para sua festa!\nLista de convidados: {}".format(len(convidados), convidados))
+
