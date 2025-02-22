@@ -35,3 +35,6 @@ if confirmacao != "s":
     print("\nLista de convidados atualizada: {}".format(convidados))
 else:
     print("\nEntão '{}' permanecerá na Lista!".format(nomeDesejado))
+
+print("\nFim do programa!")
+print("Kaio Gomes do Nascimento Mazza")

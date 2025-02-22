@@ -28,3 +28,6 @@ while confirmacao == "s":
     except:
         print("\nIndex digitado não encontrado!")
         confirmacao = input("Deseja procurar novamente? [s/n]: ").lower()
+
+print("\nFim do programa!")
+print("Kaio Gomes do Nascimento Mazza")

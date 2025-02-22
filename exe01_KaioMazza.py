@@ -9,3 +9,6 @@ try:
     print("\nO índice do país '{}' na tupa é: {}".format(paisDesejado, paises.index(paisDesejado)))
 except:
     print("\nPaís não achado ou foi digitado errado!")
+
+print("\nFim do programa!")
+print("Kaio Gomes do Nascimento Mazza")
