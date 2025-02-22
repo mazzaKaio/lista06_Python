@@ -9,7 +9,7 @@ Pergunte ao usuário se ele ainda deseja que essa pessoa venha à festa. Se ele 
 convidados = []
 
 for i in range(3):
-    nomeConvidado = input("Digite o nome do {}º convidado: ".format(i+1))
+    nomeConvidado = input("Digite o nome do {}º convidado: ".format(i+1)).title()
     convidados.append(nomeConvidado)
 
 confirmacao = input("Agora, você deseja adicionar mais algúem a sua lista? [s/n]: ").lower()
@@ -19,5 +19,19 @@ while confirmacao[0] == "s":
     convidados.append(nomeConvidado)
     confirmacao = input("\nAgora, você deseja adicionar mais algúem a sua lista? [sim/s, nao/n]: ").lower()
 
-print("\nVocê convidou {} pessoas para sua festa!\nLista de convidados: {}".format(len(convidados), convidados))
-print("--------------------------")
+print("\nVocê convidou {} pessoas para sua festa!\n--------------------------".format(len(convidados)))
+print("Lista de convidados: {}".format(convidados))
+nomeDesejado = input("Digite o nome de algum convidado conforme a Lista acima: ").title()
+
+while nomeDesejado not in convidados:
+    print("Nome não encontrado!")
+    nomeDesejado = input("\nDigite o nome de algum convidado conforme a Lista: ").title()
+
+print("A posicao do convidado '{}' é: {}".format(nomeDesejado, convidados.index(nomeDesejado)))
+confirmacao = input("Você ainda deseja que o convidado '{}' vá a sua festa? [s/n]: ".format(nomeDesejado)).lower()
+
+if confirmacao != "s":
+    convidados.remove(nomeDesejado)
+    print("\nLista de convidados atualizada: {}".format(convidados))
+else:
+    print("\nEntão '{}' permanecerá na Lista!".format(nomeDesejado))
